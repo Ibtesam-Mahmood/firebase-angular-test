@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 
+interface Book {
+  name: string;
+  author: string;
+  url: string;
+}
+
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -9,14 +15,18 @@ export class BooksComponent {
   isShowing: boolean = false;
   inputText: string = '';
 
-  name: string = 'Angular';
-  author: string = 'Youtube';
-  src: string = 'https://i.ytimg.com/vi/wkhClyW5uMc/maxresdefault.jpg';
-
-  name2: string = 'Angular Logo';
-  author2: string = 'Google';
-  src2: string =
-    'https://miro.medium.com/v2/resize:fit:1400/1*R1mfXLP9edcArZXwmGbGag.jpeg';
+  books: Book[] = [
+    {
+      name: 'Angular',
+      author: 'Youtube',
+      url: 'https://i.ytimg.com/vi/wkhClyW5uMc/maxresdefault.jpg',
+    },
+    {
+      name: 'Angular Logo',
+      author: 'Google',
+      url: 'https://miro.medium.com/v2/resize:fit:1400/1*R1mfXLP9edcArZXwmGbGag.jpeg',
+    },
+  ];
 
   handleInput(event: any): void {
     this.inputText = event.target.value;

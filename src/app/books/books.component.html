@@ -11,7 +11,7 @@
 <br>
 <!-- Event Bindings allows the component to bind to (listen to changes in) the view -->
 <button (click)="isShowing = !isShowing">
-  <!-- "ng-container" is a spacial tag that just handles cleaning up the dom if a component is not shown -->
+  <!-- "ng-container" is a spacial tag that just handles cleaning up the dom if a compoents with directives -->
   <!-- "ng-container" works similar to a span tag -->
   <ng-container *ngIf="!isShowing">Show</ng-container> 
   <ng-container *ngIf="isShowing">Hide</ng-container> 
@@ -19,13 +19,12 @@
 </button>
 <!-- Property Bindings allows the view to bind to (build based on) the component -->
 <ul *ngIf="isShowing">
-  <li>
-    <img [src]=src [alt]="name" width="200">
-    <!-- Interpolation allows the view to access the component varaibles -->
-    {{name}} by: {{author}}
-  </li>
-  <li>
-    <img [src]="src2" [alt]="name2" width="200">
-    {{name2}} by: {{author2}}
-  </li>
+  <!-- *ngFor can be used as a property binding to itterate over a list and create components for each element -->
+  <ng-container *ngFor="let book of books; let i=index">
+    <li>
+      {{i + 1}}. {{book.name}} by: {{book.author}}
+      <br>
+      <img [src]="book.url" [alt]="book.name" width="200">
+    </li>
+  </ng-container>
 </ul>
