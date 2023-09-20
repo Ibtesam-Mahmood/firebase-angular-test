@@ -18,10 +18,6 @@ export class BooksComponent {
   src2: string =
     'https://miro.medium.com/v2/resize:fit:1400/1*R1mfXLP9edcArZXwmGbGag.jpeg';
 
-  handleShowing(show: boolean): void {
-    this.isShowing = show;
-  }
-
   handleInput(event: any): void {
     this.inputText = event.target.value;
   }

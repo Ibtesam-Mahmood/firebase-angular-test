@@ -4,16 +4,21 @@
 <p>Event Binding Form</p>
 <input type="text" (input)="handleInput($event)">
 <!-- 2 way binding can be used to couple a property between the view and component -->
-<!-- demonted by: "[(ngModel)]" directive -->
+<!-- demonted by: "[()]" and "ngModel" directive -->
 <p>2 Way Binding Form</p>
 <input type="text" [(ngModel)]="inputText">
 <p>Output: <strong>{{inputText}}</strong></p>
 <br>
 <!-- Event Bindings allows the component to bind to (listen to changes in) the view -->
-<button (mouseover)="handleShowing(true)" [disabled]="isShowing">Show books</button>
-<button (click)="handleShowing(false)" [disabled]="!isShowing">Hide books</button>
+<button (click)="isShowing = !isShowing">
+  <!-- "ng-container" is a spacial tag that just handles cleaning up the dom if a component is not shown -->
+  <!-- "ng-container" works similar to a span tag -->
+  <ng-container *ngIf="!isShowing">Show</ng-container> 
+  <ng-container *ngIf="isShowing">Hide</ng-container> 
+  Books
+</button>
 <!-- Property Bindings allows the view to bind to (build based on) the component -->
-<ul [hidden]="!isShowing">
+<ul *ngIf="isShowing">
   <li>
     <img [src]=src [alt]="name" width="200">
     <!-- Interpolation allows the view to access the component varaibles -->
