@@ -1,3 +1,5 @@
+Course: https://www.youtube.com/watch?v=IYI0em-xT28
+
 # FirebaseTestApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
