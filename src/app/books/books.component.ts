@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./books.component.css'],
 })
 export class BooksComponent {
+  isShowing: boolean = false;
+
   name: string = 'Angular';
   author: string = 'Youtube';
   src: string = 'https://i.ytimg.com/vi/wkhClyW5uMc/maxresdefault.jpg';

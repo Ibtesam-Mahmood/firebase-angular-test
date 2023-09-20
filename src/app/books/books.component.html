@@ -1,11 +1,13 @@
 <h2>Programming Book List</h2>
+<button [disabled]="isShowing">Show books</button>
+<button [disabled]="!isShowing">Hide books</button>
 <ul>
   <li>
-    <img src="{{src}}" alt="{{name}}" width="200">
+    <img [src]=src [alt]="name" width="200">
     {{name}} by: {{author}}
   </li>
   <li>
-    <img src="{{src2}}" alt="{{name2}}" width="200">
+    <img [src]="src2" [alt]="name2" width="200">
     {{name2}} by: {{author2}}
   </li>
 </ul>
