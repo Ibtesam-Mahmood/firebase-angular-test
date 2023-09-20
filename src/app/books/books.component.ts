@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class BooksComponent {
   isShowing: boolean = false;
+  inputText: string = '';
 
   name: string = 'Angular';
   author: string = 'Youtube';
@@ -19,5 +20,9 @@ export class BooksComponent {
 
   handleShowing(show: boolean): void {
     this.isShowing = show;
+  }
+
+  handleInput(event: any): void {
+    this.inputText = event.target.value;
   }
 }

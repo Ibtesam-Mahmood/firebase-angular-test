@@ -1,9 +1,22 @@
 <h2>Programming Book List</h2>
-<button (click)="handleShowing(true)" [disabled]="isShowing">Show books</button>
-<button (mouseover)="handleShowing(false)" [disabled]="!isShowing">Hide books</button>
+<br>
+<!-- Stil 1 way binding thorugh event binding, won't react to changes in the inputText -->
+<p>Event Binding Form</p>
+<input type="text" (input)="handleInput($event)">
+<!-- 2 way binding can be used to couple a property between the view and component -->
+<!-- demonted by: "[(ngModel)]" directive -->
+<p>2 Way Binding Form</p>
+<input type="text" [(ngModel)]="inputText">
+<p>Output: <strong>{{inputText}}</strong></p>
+<br>
+<!-- Event Bindings allows the component to bind to (listen to changes in) the view -->
+<button (mouseover)="handleShowing(true)" [disabled]="isShowing">Show books</button>
+<button (click)="handleShowing(false)" [disabled]="!isShowing">Hide books</button>
+<!-- Property Bindings allows the view to bind to (build based on) the component -->
 <ul [hidden]="!isShowing">
   <li>
     <img [src]=src [alt]="name" width="200">
+    <!-- Interpolation allows the view to access the component varaibles -->
     {{name}} by: {{author}}
   </li>
   <li>
