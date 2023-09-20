@@ -4,15 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// Each module has a decorator like this
 @NgModule({
   declarations: [
-    AppComponent
+    // Components in this module?
+    AppComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  // Imports in this module
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+
+  // Must bootstrap the root component in the root module
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+
+// Each app has to have a root module
+export class AppModule {}
