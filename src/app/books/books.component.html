@@ -1,7 +1,7 @@
 <h2>Programming Book List</h2>
-<button [disabled]="isShowing">Show books</button>
-<button [disabled]="!isShowing">Hide books</button>
-<ul>
+<button (click)="handleShowing(true)" [disabled]="isShowing">Show books</button>
+<button (mouseover)="handleShowing(false)" [disabled]="!isShowing">Hide books</button>
+<ul [hidden]="!isShowing">
   <li>
     <img [src]=src [alt]="name" width="200">
     {{name}} by: {{author}}
