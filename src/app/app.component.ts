@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 
-// Each component has this type of decorator
 @Component({
-  selector: 'app-root', // Name of the component in the html
-  templateUrl: './app.component.html', // The html of the componenet
-  styleUrls: ['./app.component.css'], // The style sheets
+  selector: 'app-root',
+  template: '<h1>Hello World!</h1>',
+  styles: ['h1 { color: red; }'],
 })
-export class AppComponent {
-  // Variables
-  title = 'firebase-test-app';
-}
+export class AppComponent {}
