@@ -22,8 +22,9 @@
   <!-- *ngFor can be used as a property binding to itterate over a list and create components for each element -->
   <ng-container *ngFor="let book of books; let i=index">
     <li>
-      {{i + 1}}. {{book.name}} by: {{book.author}}
-      <br>
+       <!-- Pipes (ex: " | titlecase") can be used generically to transform a value, you may also be able to create your own pipes -->
+      <h4>{{i + 1}}. {{book.name | titlecase}} by: {{book.author | titlecase}}</h4>
+      <p>{{ book.amount | currency:'CAD' }}</p>
       <img [src]="book.url" [alt]="book.name" width="200">
     </li>
   </ng-container>
