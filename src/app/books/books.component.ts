@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Book {
-  name: string;
-  author: string;
-  url: string;
-  amount: number;
-}
+import { Book } from '../types/book';
 
 @Component({
   selector: 'app-books',
@@ -28,6 +22,12 @@ export class BooksComponent {
       author: 'Google',
       url: 'https://miro.medium.com/v2/resize:fit:1400/1*R1mfXLP9edcArZXwmGbGag.jpeg',
       amount: 10,
+    },
+    {
+      name: 'Photography',
+      author: 'Unsplash',
+      url: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80',
+      amount: 30,
     },
   ];
 

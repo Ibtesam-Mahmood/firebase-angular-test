@@ -1,0 +1,7 @@
+<li class="book">
+  <!-- Pipes (ex: " | titlecase") can be used generically to transform a value, you may also be able to create your own pipes -->
+ <img [src]="book.url" [alt]="book.name" width="200">
+ <h4>{{book.name | titlecase}} by: {{book.author | titlecase}}</h4>
+ <p>{{ book.amount | currency:'CAD' }}</p>
+ <button>Add to Cart</button>
+</li>

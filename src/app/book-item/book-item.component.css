@@ -1,0 +1,9 @@
+.book {
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.book h4 {
+  text-overflow: ellipsis;
+}
