@@ -8,7 +8,7 @@ This project was created following this [Course](https://www.youtube.com/watch?v
 
 These were the commands used within various stages of the project.
 
-```unix
+```shell
 # Install Angular CLI
 npm install -g @angular/cli
 
@@ -21,6 +21,7 @@ ng generate component book-item
 
 # Generate a Service
 ng generate service books/books
+ng generate service services/cart # Global
 
 # Generate a Modeule (creates a folder at the name by defualt)
 ng generate module books

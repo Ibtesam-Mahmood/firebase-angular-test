@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Book } from '../../types/book';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-book-item',
@@ -7,14 +8,14 @@ import { Book } from '../../types/book';
   styleUrls: ['./book-item.component.css'],
 })
 export class BookItemComponent {
+  // DI the cart service
+  constructor(private cartService: CartService) {}
+
   // Get input from parent component
   @Input() book!: Book;
 
-  // Used to send an event to parent component
-  @Output('addToCart') addToCartEvent = new EventEmitter<Book>();
-
   addToCart() {
-    // Send event to parent component
-    this.addToCartEvent.emit(this.book);
+    // Use the DI cart service to add the book to the cart
+    this.cartService.addToCart(this.book);
   }
 }
