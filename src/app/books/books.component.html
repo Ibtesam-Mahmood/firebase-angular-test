@@ -1,9 +1,10 @@
 <h2>Programming Book List</h2>
+{{cart.length}} items in cart
 <!-- Property Bindings allows the view to bind to (build based on) the component -->
-<ul *ngIf="isShowing">
+<ul>
   <!-- *ngFor can be used as a property binding to itterate over a list and create components for each element -->
   <ng-container *ngFor="let book of books; let i=index">
     <!-- Bind the book property to the book-item compotnent -->
-    <app-book-item [book]="book"></app-book-item>
+    <app-book-item [book]="book" (addToCart)="addToCart($event)"></app-book-item>
   </ng-container>
 </ul>

@@ -7,9 +7,6 @@ import { Book } from '../types/book';
   styleUrls: ['./books.component.css'],
 })
 export class BooksComponent {
-  isShowing: boolean = true;
-  inputText: string = '';
-
   books: Book[] = [
     {
       name: 'Angular',
@@ -31,7 +28,9 @@ export class BooksComponent {
     },
   ];
 
-  handleInput(event: any): void {
-    this.inputText = event.target.value;
+  cart: Book[] = [];
+
+  addToCart(book: Book) {
+    this.cart.push(book);
   }
 }
