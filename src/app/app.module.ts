@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { FormsModule } from '@angular/forms';
-import { BookItemComponent } from './book-item/book-item.component';
+import { BookItemComponent } from './books/book-item/book-item.component';
+import { BooksModule } from './books/books.module';
 
 @NgModule({
-  declarations: [AppComponent, BooksComponent, BookItemComponent],
-  imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, FormsModule, BooksModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
