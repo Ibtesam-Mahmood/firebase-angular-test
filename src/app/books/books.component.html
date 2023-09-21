@@ -1,29 +1,11 @@
 <h2>Programming Book List</h2>
-<br>
-<!-- Stil 1 way binding thorugh event binding, won't react to changes in the inputText -->
-<p>Event Binding Form</p>
-<input type="text" (input)="handleInput($event)">
-<!-- 2 way binding can be used to couple a property between the view and component -->
-<!-- demonted by: "[()]" and "ngModel" directive -->
-<p>2 Way Binding Form</p>
-<input type="text" [(ngModel)]="inputText">
-<p>Output: <strong>{{inputText}}</strong></p>
-<br>
-<!-- Event Bindings allows the component to bind to (listen to changes in) the view -->
-<button (click)="isShowing = !isShowing">
-  <!-- "ng-container" is a spacial tag that just handles cleaning up the dom if a compoents with directives -->
-  <!-- "ng-container" works similar to a span tag -->
-  <ng-container *ngIf="!isShowing">Show</ng-container> 
-  <ng-container *ngIf="isShowing">Hide</ng-container> 
-  Books
-</button>
 <!-- Property Bindings allows the view to bind to (build based on) the component -->
 <ul *ngIf="isShowing">
   <!-- *ngFor can be used as a property binding to itterate over a list and create components for each element -->
   <ng-container *ngFor="let book of books; let i=index">
-    <li>
+    <li class="book">
        <!-- Pipes (ex: " | titlecase") can be used generically to transform a value, you may also be able to create your own pipes -->
-      <h4>{{i + 1}}. {{book.name | titlecase}} by: {{book.author | titlecase}}</h4>
+      <h4>{{book.name | titlecase}} by: {{book.author | titlecase}}</h4>
       <p>{{ book.amount | currency:'CAD' }}</p>
       <img [src]="book.url" [alt]="book.name" width="200">
     </li>
