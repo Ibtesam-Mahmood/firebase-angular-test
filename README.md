@@ -18,6 +18,7 @@ ng create firebase-test-app
 # Generate a Component
 ng generate component books
 ng generate component book-item
+ng generate component cart
 
 # Generate a Service
 ng generate service books/books

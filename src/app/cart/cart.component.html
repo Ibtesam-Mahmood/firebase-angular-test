@@ -1,0 +1,7 @@
+<ng-container *ngIf="cartLength() == 0">No Items in Cart</ng-container>
+<ng-container *ngIf="cartLength() > 0">
+  <p>Cart Length: {{ cartLength() }}</p>
+  <ng-container *ngFor="let item of getCart()">
+    <p>{{ item.name }}</p>
+    <button (click)="removeFromCart(item)">Remove</button>
+  </ng-container>
