@@ -10,5 +10,5 @@
   @apply px-4 py-2 rounded bg-yellow-300 text-black font-bold hover:bg-yellow-400 transition;
 }
 .button-grey {
-  @apply px-4 py-2 rounded bg-yellow-300 text-black font-bold hover:bg-yellow-400 transition;
+  @apply px-4 py-2 rounded bg-gray-300 text-black font-bold hover:bg-gray-400 transition;
 }
