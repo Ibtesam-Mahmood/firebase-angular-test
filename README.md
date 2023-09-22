@@ -1,8 +1,14 @@
 # FirebaseTestApp
 
+Basic learning project created to learn the basics of Angular.
+
+| ![Home Page](preview/home.png) | ![Cart Page](preview/cart.png) | ![Login Page](preview/login.png) | ![Register Page](preview/register.png) |
+| ------------------------------ | ------------------------------ | -------------------------------- | -------------------------------------- |
+| Home Page                      | Cart Page                      | Login Page                       | Register Page                          |
+
 ## Course
 
-This project was created following this [Course](https://www.youtube.com/watch?v=IYI0em-xT28)
+This project was created following this [Course](https://www.youtube.com/watch?v=IYI0em-xT28). Please look through the commits for a step by step guide to the course.
 
 ## Commands
 
