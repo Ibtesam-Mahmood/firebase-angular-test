@@ -26,7 +26,15 @@ ng generate service services/cart # Global
 
 # Generate a Modeule (creates a folder at the name by defualt)
 ng generate module books
+
+# Install for development and create a tailwind config file
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
 ```
+
+## Styling
+
+This project is styled using [Tailwind css](https://tailwindcss.com/docs/guides/angular)
 
 ## Additional Resources
 
