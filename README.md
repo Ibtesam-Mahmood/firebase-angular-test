@@ -19,7 +19,7 @@ These were the commands used within various stages of the project.
 npm install -g @angular/cli
 
 # Create the Application
-ng create firebase-test-app
+ng new firebase-test-app
 
 # Generate a Component
 ng generate component books
