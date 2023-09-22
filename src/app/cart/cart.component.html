@@ -1,7 +1,19 @@
-<ng-container *ngIf="cartLength() == 0">No Items in Cart</ng-container>
+<!-- No Items in Cart Message -->
+<ng-container *ngIf="cartLength() == 0"
+  class="text-lg mt-4 font-semibold text-red-600">No Items in Cart</ng-container>
+
+<!-- Items in Cart Section -->
 <ng-container *ngIf="cartLength() > 0">
-  <p>Cart Length: {{ cartLength() }}</p>
-  <ng-container *ngFor="let item of getCart()">
-    <p>{{ item.name }}</p>
-    <button (click)="removeFromCart(item)">Remove</button>
+  <p class="text-lg mt-4 font-semibold">Cart Length: {{ cartLength() }}</p>
+
+  <!-- Cart Items List -->
+  <ng-container *ngFor="let item of getCart()" class="mt-2">
+    <div class="bg-gray-100 p-2 rounded flex justify-between items-center">
+      <p class="font-medium">{{ item.name }}</p>
+      <button (click)="removeFromCart(item)"
+        class="px-2 py-1 text-sm bg-red-500 text-white rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+        Remove
+      </button>
+    </div>
   </ng-container>
+</ng-container>

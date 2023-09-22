@@ -1,6 +1,4 @@
-<h2>Programming Book List</h2>
-<!-- Property Bindings allows the view to bind to (build based on) the component -->
-<ul>
+<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
   <!-- *ngFor can be used as a property binding to itterate over a list and create components for each element -->
   <ng-container *ngFor="let book of books; let i=index">
     <!-- Bind the book property to the book-item compotnent -->

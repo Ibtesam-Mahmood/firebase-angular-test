@@ -1,2 +1,14 @@
-<!-- Manage building components via the router -->
-<router-outlet></router-outlet>
+<nav class="flex justify-between p-4 bg-blue-800 text-white">
+  <div>
+    <a routerLink="/">Book Shop</a>
+  </div>
+  <div>
+    <a
+      class="px-4 py-2 rounded bg-yellow-300 text-black font-bold hover:bg-yellow-400 transition"
+      routerLink="/cart">Cart</a>
+  </div>
+</nav>
+<div class="p-4">
+  <!-- Manage building components via the router -->
+  <router-outlet></router-outlet>
+</div>

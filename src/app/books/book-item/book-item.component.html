@@ -1,7 +1,20 @@
-<li class="book">
-  <!-- Pipes (ex: " | titlecase") can be used generically to transform a value, you may also be able to create your own pipes -->
- <img [src]="book.url" [alt]="book.name" width="200">
- <h4>{{book.name | titlecase}} by: {{book.author | titlecase}}</h4>
- <p>{{ book.amount | currency:'CAD' }}</p>
- <button (click)="addToCart()">Add to Cart</button>
+<li class="border rounded-xl p-4 flex flex-col justify-between">
+  <!-- Image -->
+  <img [src]="book.url" [alt]="book.name"
+    class="w-full h-40 object-cover rounded mb-4">
+
+  <!-- Content Section -->
+  <div>
+    <!-- Book Name and Author -->
+    <h4 class="font-semibold text-lg mb-2">{{book.name | titlecase}} by:
+      {{book.author | titlecase}}</h4>
+
+    <!-- Book Price -->
+    <p class="text-blue-600 mb-2">{{ book.amount | currency:'CAD' }}</p>
+  </div>
+
+  <!-- Add to Cart Button -->
+  <button
+    class="mt-1 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 self-center"
+    (click)="addToCart()">Add to Cart</button>
 </li>
