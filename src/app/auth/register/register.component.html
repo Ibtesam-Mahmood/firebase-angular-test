@@ -1,26 +1,54 @@
 <div class="flex m-auto h-screen justify-center">
-  <form (ngSubmit)="submitRegistration()" class="p-4 rounded-lg border m-auto">
+  <form (ngSubmit)="submitRegistration()" class="p-4 rounded-lg border m-auto"
+    #registrationForm="ngForm">
+
+    <!-- Title -->
     <h1 class="text-center text-xl">Register</h1>
+
+    <!-- Email Field -->
     <div class="w-full my-3">
       <label for="email">Email</label>
       <input type="email" id="email" name="email"
         class="p-2 rounded w-full border"
-        placeholder="Email Address" [(ngModel)]="form.email">
+        placeholder="Email Address" [(ngModel)]="form.email" #email="ngModel"
+        required>
     </div>
+    <div *ngIf="email.invalid && email.touched"
+      class="p-2 bg-red-300 text-red-900 rounded">
+      Email field must be valid
+    </div>
+
+    <!-- Password Field -->
     <div class="w-full my-3">
       <label for="password">Password</label>
       <input type="password" id="password" name="password"
         class="p-2 rounded w-full border"
-        placeholder="Password" [(ngModel)]="form.password">
+        placeholder="Password" [(ngModel)]="form.password" #password="ngModel"
+        required>
     </div>
+    <div *ngIf="password.invalid && password.touched"
+      class="p-2 bg-red-300 text-red-900 rounded">
+      Password field must be valid
+    </div>
+
+    <!-- Confirm Password Field -->
     <div class="w-full my-3">
       <label for="confirm_password">Confirm Password</label>
       <input type="password" id="confirm_password" name="confirm_password"
         class="p-2 rounded w-full border"
-        placeholder="Confirm Password" [(ngModel)]="form.confirmPassword">
+        placeholder="Confirm Password" [(ngModel)]="form.confirmPassword"
+        #confirm_password="ngModel"
+        required>
     </div>
+    <div *ngIf="confirm_password.invalid && confirm_password.touched"
+      class="p-2 bg-red-300 text-red-900 rounded">
+      Confirm Passwword must match Password
+    </div>
+
+    <!-- Submit Button -->
     <div class="w-full my-3">
-      <input type="submit" value="Register" class="w-full button-grey">
+      <input type="submit" [disabled]="registrationForm.form.invalid"
+        value="Register" class="w-full button-grey">
     </div>
   </form>
 </div>
