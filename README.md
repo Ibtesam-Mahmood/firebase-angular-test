@@ -8,7 +8,7 @@ Basic learning project created to learn the basics of Angular.
 
 ## Course
 
-This project was created following this [Course](https://www.youtube.com/watch?v=IYI0em-xT28). Please look through the commits for a step by step guide to the course.
+This project was created following this [Course](https://www.youtube.com/watch?v=IYI0em-xT28). Please look through the [Commits](https://github.com/Ibtesam-Mahmood/firebase-angular-test/commits/main) for a step by step guide to the course.
 
 ## Commands
 
