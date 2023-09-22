@@ -47,3 +47,4 @@ This project is styled using [Tailwind css](https://tailwindcss.com/docs/guides/
 - [Angular Directives](https://angular.io/guide/built-in-directives)
 - [Angular Routing](https://angular.io/guide/routing-overview)
 - [Angular Pipe Docs](https://angular.io/guide/pipes)
+- [Angular Forms](https://angular.io/guide/reactive-forms)
