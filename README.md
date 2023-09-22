@@ -37,4 +37,5 @@ ng generate module books
 - [Services and Dependency Injection](https://angular.io/guide/creating-injectable-service)
 - [Lifecycle Hooks](https://angular.io/guide/lifecycle-hooks)
 - [Angular Directives](https://angular.io/guide/built-in-directives)
+- [Angular Routing](https://angular.io/guide/routing-overview)
 - [Angular Pipe Docs](https://angular.io/guide/pipes)
